@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   has_many :room_users                  #中間テーブル紐づけ
   has_many :rooms,through: :room_users
+  has_many :messages
 end
