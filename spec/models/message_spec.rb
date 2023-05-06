@@ -33,7 +33,7 @@ RSpec.describe Message, type: :model do
       end
       it 'userが紐付いていないと保存できない' do
         @message.user = nil
-        @message.valid?
+        @message.valid? 
         expect(@message.errors.full_messages).to include('User must exist')
       end
     end
